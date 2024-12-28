@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+} */
+
+/* .logo img {
+    width: 10px;
+    height: auto;
+} */
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+} */
+
+.logo img {
+    width: 80px;
+    /* Adjust this for desired logo size */
+    height: auto;
+}
+
+.image-content img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer .social-links a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+
+    header,
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .image-content img {
+        max-width: 100%;
+    }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 1025px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+nav a {
+    transition: color 0.3s ease;
+}
+
+.image-content img {
+    transition: transform 0.5s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+}
